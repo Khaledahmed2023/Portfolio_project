@@ -6,7 +6,8 @@
     padding: 0;
     margin: 0;
     transition: all 300ms ease-in-out;
-    font-family: 'Domine', serif; /* Change the font-family here */
+    font-family: 'Domine', serif;
+    /* Change the font-family here */
 }
 
 /* Custom variables */
@@ -232,13 +233,13 @@ a {
     color: var(--dark-grey);
 }
 
-.social > p {
+.social>p {
     font-size: 16px;
     font-weight: bold;
     margin: 16px 0;
 }
 
-.social > span {
+.social>span {
     padding: 0 5px;
 }
 
@@ -299,3 +300,73 @@ a {
         align-self: center;
     }
 }
+
+/* Media query for screens with minimum width 60em */
+@media (min-width: 60em) {
+    .intro {
+        width: 85%;
+    }
+
+
+    .intro_title {
+        font-size: 32px;
+        margin: 0;
+        line-height: 1.3;
+    }
+
+    .intro_title_1 {
+        font-size: 32px;
+        margin-top: -10px;
+        line-height: 1.3;
+    }
+
+
+    .intro_subtitle {
+        font-size: 16px;
+    }
+
+    .social>p {
+        font-size: 16px;
+    }
+
+    .social>span {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+
+    .button {
+        font-size: 16px;
+    }
+}
+
+/* Media query for screens with minimum width 75em */
+@media (min-width: 75em) {
+
+    .intro_title {
+        font-size: 64px;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .intro_title_1 {
+        font-size: 56px;
+        margin-top: -10px;
+    }
+
+    .intro_subtitle {
+        font-size: 19.2px;
+    }
+
+    .social>p {
+        font-size: 20.8px;
+    }
+    .social>span {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+    .button {
+            font-size: 17.6px;
+        }
+    }
