@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Document</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
-    <style>
-        /* Your CSS styles here */
-    </style>
 </head>
+
 <body>
     <header class="header" id="header">
         <div class="logo">
@@ -22,10 +21,13 @@
                     <a href="#home" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="#Projects" class="nav-link">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#Experiences" class="nav-link">Experiences</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#References" class="nav-link">References</a>
                 </li>
                 <li class="nav-item">
                     <a href="#contact" class="nav-link nav-link-cta">Contact Me</a>
@@ -45,49 +47,62 @@
                 Aspiring AI Developer
             </h1>
             <p class="intro_subtitle">
-                Welcome to my portfolio! I'm a passionate AI & ML student with a knack for data analysis. When I'm not
-                coding, you'll find me cheering for Liverpool FC, enjoying time with family and friends, and staying
-                fit. Join me on this journey of exploration and innovation in the world of data. </p>
+                Welcome to my portfolio! As a dedicated AI & ML student, I'm fueled by a passion for unraveling data
+                mysteries. When I'm not coding, you'll catch me rooting for Liverpool FC, cherishing moments with loved
+                ones, and embracing fitness challenges. Come join me on this thrilling journey of exploration and
+                innovation in the realm of data.</p>
             <a href="#contact" class="button">Contact Me</a>
             <div class="social">
                 <p>Follow Me</p>
-                <span><a href="https://www.linkedin.com/in/khaled-ahmed-87aa971b5" target="_blank"><i
-                            class="fab fa-linkedin"></i></a></span>
-                <span><a href="https://github.com/Khaledahmed2023" target="_blank"><i
-                            class="fab fa-github"></i></a></span>
+                <a href="https://se.linkedin.com/in/khaled-ahmed-87aa971b5" target="_blank">
+                    <span class="icon-large"><i class="fab fa-linkedin"></i></span>
+                </a>
+                <a href="https://github.com/Khaledahmed2023" target="_blank">
+                    <span class="icon-large"><i class="fab fa-github"></i></span>
+                </a>
             </div>
             <img src="images/pexels-creation-hill-1681010.jpg" alt="" class="intro_illustration">
         </section>
-        <section class="projects" id="projects">
-            <h1>Projects</h1>
-            <div class="projects_left"> <!-- Corrected class name -->
-                <h1>Projects |</h1>
-                <h1>Offer</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="projects_button"><a>Let's Talk</a></div> <!-- Corrected class name -->
+
+
+        <section id="projects">
+            <div class="section-header">
+                <p class="section__text__p1">Browse My Recent</p>
+                <h1 class="title">Projects</h1>
             </div>
-            <div class="projects_right"> <!-- Corrected class name -->
-                <input type="checkbox" checked="true" id="collapsible-head-1">
-                <label for="collapsible-head-1">Web Design</label>
-                <div class="collapsible-text-1"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <hr>
-            <div class="projects_right"> <!-- Corrected class name -->
-                <input type="checkbox" checked="true" id="collapsible-head-2">
-                <label for="collapsible-head-2">Web Design</label>
-                <div class="collapsible-text-2"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <hr>
-            <div class="projects_right"> <!-- Corrected class name -->
-                <input type="checkbox" checked="true" id="collapsible-head-3">
-                <label for="collapsible-head-3">Web Design</label>
-                <div class="collapsible-text-3"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="projects-container">
+                <div class="article-container">
+                    <img src="images/gdp_project_img.webp" alt="GDP Analytics Project Image" class="project-img" />
+                    <h2 class="experience-sub-title project-title">GDP Analytics Project</h2>
+                    <p>This repository contains Python code for analyzing the relationship between GDP, GDP per capita,
+                        and life expectancy across countries and years. It performs data cleaning, visualization, and
+                        analysis using libraries like pandas, matplotlib, and seaborn.</p>
+                    <div class="btn-container">
+                        <a href="https://github.com/Khaledahmed2023/GDP-Analytics" target="_blank"
+                            class="btn btn-color-2 project-btn">
+                            Github
+                        </a>
+                    </div>
+                </div>
+
+                <div class="article-container">
+                    <img src="images/flask_img.jpeg" alt="Flask Project Image" class="project-img" />
+                    <h2 class="experience-sub-title project-title">Flask Book Management API</h2>
+                    <p>Flask Book Management API is a lightweight RESTful API for managing books and reviews. Developed
+                        with Flask and SQLite, it provides simple endpoints for CRUD operations on book data. The API
+                        has undergone thorough testing using Postman for reliability.</p>
+                    <div class="btn-container">
+                        <a href="https://github.com/Khaledahmed2023/flask-book-management-api" target="_blank"
+                            class="btn btn-color-2 project-btn">
+                            Github
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
-        
+
+
+
     </main>
 
     <script src="script.js"></script>
