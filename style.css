@@ -361,12 +361,84 @@ a {
     .social>p {
         font-size: 20.8px;
     }
+
     .social>span {
-            font-size: 24px;
-            margin-right: 10px;
-        }
+        font-size: 24px;
+        margin-right: 10px;
+    }
 
     .button {
-            font-size: 17.6px;
-        }
+        font-size: 17.6px;
     }
+}
+
+.projects_button {
+    display: inline-block;
+    padding: 1em 1.4em;
+    width: 5rem;
+    height: 5rem;
+    font-size: 1rem;
+    background-color: var(--red);
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 2.3rem;
+}
+
+.projects_button:hover {
+    background-color: rgb(227, 84, 84);
+}
+
+@media (min-width: 36rem) {
+    .projects {
+        margin: 5rem auto 0;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 30px;
+    }
+
+    .projects_right label {
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    .projects_left > h1 {
+        font-size: 2.4rem;
+    }
+
+    .projects_left > p,
+    .projects_right p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 60rem) {
+    .projects{
+        width: 85%;
+    }
+
+    .projects_right label {
+        font-size: 2.1rem;
+        margin: 0;
+    }
+
+    .projects_left > h1 {
+        font-size: 2.8rem;
+    }
+
+    .projects_left > p,
+    .projects_right p {
+        font-size: 1rem;
+    }
+
+    .projects_button {
+        font-size: 1.5rem;
+        width: 8rem;
+        height: 8rem;
+        padding: 1.2rem 1.6rem;
+        margin-top: 3rem;
+    }
+}
+
+
+/* PROJECTS SECTION */
