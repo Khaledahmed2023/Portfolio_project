@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+/* Import Open Sans font with italic style */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@300..700&display=swap');
 
 /* Resetting styles */
 * {
@@ -6,8 +7,7 @@
     padding: 0;
     margin: 0;
     transition: all 300ms ease-in-out;
-    font-family: 'Domine', serif;
-    /* Change the font-family here */
+    font-family: 'Open Sans', sans-serif; /* Change to Open Sans */
 }
 
 /* Custom variables */
@@ -22,7 +22,7 @@ html {
 body {
     margin: 0;
     background-color: var(--light-grey);
-    font-family: 'Domine', serif; /* Change to use the imported font */
+    font-family: 'Open Sans', sans-serif; /* Change to Open Sans */
     line-height: 1.4;
     padding-top: 80px;
 }
@@ -96,7 +96,7 @@ a {
     left: -16px;
     width: 50vw;
     height: 420px;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.1s ease-in-out;
     background-color: var(--red);
     transform: translateX(-100px);
 }
@@ -104,10 +104,10 @@ a {
 /* Logo styles */
 .logo {
     z-index: 2;
-    font-family: 'Domine', serif; /* Change to use the imported font */
+    font-family: 'Open Sans', sans-serif; /* Change to Open Sans */
     font-weight: bold;
     margin: 16px 0 0;
-    transition: .1s ease;
+    transition: 0.1s ease;
 }
 
 .logo:hover {
@@ -191,7 +191,7 @@ a {
 .intro_title,
 .intro_title_1 {
     margin: 0;
-    font-family: 'Domine', serif; /* Change to use the imported font */
+    font-family: 'Open Sans', sans-serif; /* Change to Open Sans */
     font-size: 24px;
     font-weight: normal;
     line-height: 1.4;
@@ -251,6 +251,7 @@ a {
 
 .icon-large {
     font-size: 24px;
+    color: #4f3961; /* Dark purple color */
 }
 
 /* Media query for larger screens */
@@ -378,10 +379,8 @@ a {
 
 /* ABOUT SECTION */
 #about {
-    padding: 100px 0;
-    background-color: var(--red); 
     position: relative;
-    overflow: hidden;
+    padding: 120px; 
 }
 
 .section-header {
@@ -390,96 +389,46 @@ a {
 }
 
 .section__text__p1 {
-    font-size: 2.5rem;
-    color: #fff !important; 
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
-
 
 .title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    text-align: center;
-    color: var(--red);
+    color: #4f3961; /* Adjust title color */
     margin-bottom: 10px;
-}
-
-
-.title::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: var(--dark-purple);
-    transition: width 0.4s ease-in-out; 
-}
-
-.title:hover::after {
-    width: 110%; 
 }
 
 .about-container {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 2rem;
 }
 
 .about-content-left,
 .about-content-right {
     flex: 1;
-    padding: 0 20px;
+}
+
+.about-part {
+    margin-bottom: 30px; /* Add margin between parts */
+}
 
 .about-subtitle {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: var(--dark-purple);
-    margin-bottom: 20px;
+    color: #4f3961; /* Adjust subtitle color */
+    margin-bottom: 10px;
 }
 
 .about-text {
-    font-size: 16px;
-    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #585858; /* Adjust text color */
 }
 
-/* List Styling */
-.about-container ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
 
-.about-container ul li {
-    margin-bottom: 10px;
-    color: #fff; 
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-content-left,
-    .about-content-right {
-        margin-right: 0;
-        margin-bottom: 50px;
-        text-align: center;
-    }
-}
-
-.section-header .title {
-    color: var(--dark-purple); 
-}
-
-.section-header .section__text__p1,
-.section-header .title {
-    color: #fff; 
 
 /* PROJECTS SECTION */
 #projects {
@@ -493,13 +442,13 @@ a {
 }
 
 .projects__text__p2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: var(--dark-purple);
     font-weight: bold;
     margin-bottom: 10px;
 }
 .p-title{
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--red);
     font-weight: bold;
     margin-bottom: 10px;
@@ -508,16 +457,16 @@ a {
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
 }
 
 .article-container {
     flex: 1 1 300px;
     max-width: 400px;
-    padding: 20px;
-    border: 1px solid #ccc;
+    padding: 15px;
+    border: 2px solid #ccc;
     border-radius: 8px;
-    box-sizing: border-box;
+    box-sizing: content-box;
     background-color: #f9f9f9;
 }
 
@@ -579,5 +528,69 @@ a {
 @media (min-width: 1024px) {
     .article-container {
         flex-basis: calc(33.33% - 20px); 
+    }
+}
+
+
+/* Styling for References section */
+#references {
+    padding: 120px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section__text__p1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4f3961;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--red);
+    margin-bottom: 20px;
+}
+
+.references-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.reference {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.reference:hover {
+    transform: translateY(-5px);
+}
+
+.reference-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #4f3961;
+    margin-bottom: 10px;
+}
+
+.reference-info {
+    font-size: 1.4rem;
+    color: #585858;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .references-container {
+        flex-direction: column;
     }
 }
