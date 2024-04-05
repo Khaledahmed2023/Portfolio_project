@@ -15,7 +15,7 @@ function toggleNavigation() {
 }
 
 // Close navigation when clicking outside of it
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     const isClickInsideNav = navBar.contains(event.target);
     const isClickOnNavToggle = navButton.contains(event.target);
 
@@ -25,7 +25,7 @@ document.addEventListener('click', function(event) {
 });
 
 // Function to handle header position on scroll
-window.onscroll = function() {
+window.onscroll = function () {
     scrollFunction()
 };
 
@@ -40,3 +40,35 @@ function scrollFunction() {
         header.style.width = "auto";
     }
 }
+
+// Function for sending contact form to google sheet //
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz-9FFnoJhw9LfkRgT34DkAhwgkIueGD8vuT_-LO-gfRcdnT9xai3ksvzDTybEMRgpIqg/exec';
+const form = document.forms['submit-to-google-sheet'];
+
+// Function to display a message
+function showMessage(message) {
+    alert(message);
+}
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            if (response.ok) {
+                console.log('Form submission successful');
+
+                showMessage('Your message has been sent successfully!');
+
+            } else {
+                console.error('Form submission failed with status:', response.status);
+
+                showMessage('Failed to send message. Please try again later.');
+            }
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
+
+            showMessage('An error occurred while submitting the form. Please try again later.');
+        });
+});
